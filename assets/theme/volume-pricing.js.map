@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/volume-pricing.js"],
+  "sourcesContent": ["import { Component } from '@theme/component';\n\n/**\n * Displays volume pricing table with expandable rows.\n * Shows pricing tiers based on quantity thresholds.\n *\n * @extends {Component}\n */\nclass VolumePricingComponent extends Component {\n  /**\n   * Toggles the expanded state of the volume pricing table\n   */\n  toggleExpanded() {\n    this.classList.toggle('volume-pricing--expanded');\n  }\n}\n\nif (!customElements.get('volume-pricing')) {\n  customElements.define('volume-pricing', VolumePricingComponent);\n}\n"],
+  "mappings": "AAAA,OAAS,cAAiB,mBAQ1B,MAAM,+BAA+B,SAAU,CAI7C,gBAAiB,CACf,KAAK,UAAU,OAAO,0BAA0B,CAClD,CACF,CAEK,eAAe,IAAI,gBAAgB,GACtC,eAAe,OAAO,iBAAkB,sBAAsB",
+  "names": []
+}

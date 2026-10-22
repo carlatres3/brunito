@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/page-view-event.js"],
+  "sourcesContent": ["import { PageViewEvent } from '@shopify/events';\nimport { onDocumentReady } from '@theme/utilities';\n\nonDocumentReady(\n  function dispatchPageViewEvent() {\n    /** @type {HTMLElement | null} */\n    const templateElement = document.querySelector('main[data-template]');\n    const template = templateElement?.dataset.template || '';\n\n    // -- Page --\n    document.dispatchEvent(\n      new PageViewEvent({\n        page: {\n          template,\n          title: document.title,\n          url: window.location.href,\n        },\n      })\n    );\n  },\n  { once: true }\n);\n"],
+  "mappings": "AAAA,OAAS,kBAAqB,kBAC9B,OAAS,oBAAuB,mBAEhC,gBACE,UAAiC,CAG/B,MAAM,SADkB,SAAS,cAAc,qBAAqB,GAClC,QAAQ,UAAY,GAGtD,SAAS,cACP,IAAI,cAAc,CAChB,KAAM,CACJ,SACA,MAAO,SAAS,MAChB,IAAK,OAAO,SAAS,IACvB,CACF,CAAC,CACH,CACF,EACA,CAAE,KAAM,EAAK,CACf",
+  "names": []
+}

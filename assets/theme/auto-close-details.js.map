@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/auto-close-details.js"],
+  "sourcesContent": ["(function autoCloseDetails() {\n  document.addEventListener('click', function (event) {\n    const detailsToClose = [...document.querySelectorAll('details[data-auto-close-details][open]')].filter(\n      (element) => {\n        const closingOn = window.innerWidth < 750 ? 'mobile' : 'desktop';\n        return (\n          element.getAttribute('data-auto-close-details')?.includes(closingOn) &&\n          !(event.target instanceof Node && element.contains(event.target))\n        );\n      }\n    );\n\n    for (const detailsElement of detailsToClose) detailsElement.removeAttribute('open');\n  });\n})();\n"],
+  "mappings": "CAAC,UAA4B,CAC3B,SAAS,iBAAiB,QAAS,SAAU,MAAO,CAClD,MAAM,eAAiB,CAAC,GAAG,SAAS,iBAAiB,wCAAwC,CAAC,EAAE,OAC7F,SAAY,CACX,MAAM,UAAY,OAAO,WAAa,IAAM,SAAW,UACvD,OACE,QAAQ,aAAa,yBAAyB,GAAG,SAAS,SAAS,GACnE,EAAE,MAAM,kBAAkB,MAAQ,QAAQ,SAAS,MAAM,MAAM,EAEnE,CACF,EAEA,UAAW,kBAAkB,eAAgB,eAAe,gBAAgB,MAAM,CACpF,CAAC,CACH,GAAG",
+  "names": []
+}

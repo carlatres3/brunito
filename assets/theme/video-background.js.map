@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/video-background.js"],
+  "sourcesContent": ["import { Component } from '@theme/component';\n\n/**\n * A custom element that renders a video background.\n *\n * @typedef {object} Refs\n * @property {HTMLElement[]} videoSources - The video sources.\n * @property {HTMLVideoElement} videoElement - The video element.\n *\n * @extends Component<Refs>\n */\nexport class VideoBackgroundComponent extends Component {\n  requiredRefs = ['videoSources', 'videoElement'];\n\n  connectedCallback() {\n    super.connectedCallback();\n\n    const { videoSources, videoElement } = this.refs;\n\n    for (const source of videoSources) {\n      const { videoSource } = source.dataset;\n\n      if (videoSource) source.setAttribute('src', videoSource);\n    }\n\n    videoElement.load();\n  }\n}\n\nif (!customElements.get('video-background-component')) {\n  customElements.define('video-background-component', VideoBackgroundComponent);\n}\n"],
+  "mappings": "AAAA,OAAS,cAAiB,mBAWnB,aAAM,iCAAiC,SAAU,CACtD,aAAe,CAAC,eAAgB,cAAc,EAE9C,mBAAoB,CAClB,MAAM,kBAAkB,EAExB,KAAM,CAAE,aAAc,YAAa,EAAI,KAAK,KAE5C,UAAW,UAAU,aAAc,CACjC,KAAM,CAAE,WAAY,EAAI,OAAO,QAE3B,aAAa,OAAO,aAAa,MAAO,WAAW,CACzD,CAEA,aAAa,KAAK,CACpB,CACF,CAEK,eAAe,IAAI,4BAA4B,GAClD,eAAe,OAAO,6BAA8B,wBAAwB",
+  "names": []
+}

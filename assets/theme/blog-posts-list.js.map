@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/blog-posts-list.js"],
+  "sourcesContent": ["import PaginatedList from '@theme/paginated-list';\n\n/**\n * A custom element that renders a paginated blog posts list\n */\nexport default class BlogPostsList extends PaginatedList {}\n\nif (!customElements.get('blog-posts-list')) {\n  customElements.define('blog-posts-list', BlogPostsList);\n}\n"],
+  "mappings": "AAAA,OAAO,kBAAmB,wBAK1B,qBAAqB,sBAAsB,aAAc,CAAC,CAErD,eAAe,IAAI,iBAAiB,GACvC,eAAe,OAAO,kBAAmB,aAAa",
+  "names": []
+}

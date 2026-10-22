@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["/cdn/shop/t/5/assets/rte-formatter.js"],
+  "sourcesContent": ["import { Component } from '@theme/component';\n\n/**\n * A custom element that formats rte content for easier styling\n */\nclass RTEFormatter extends Component {\n  connectedCallback() {\n    super.connectedCallback();\n    this.querySelectorAll('table').forEach(this.#formatTable);\n  }\n\n  /**\n   * Formats a table for easier styling\n   * @param {HTMLTableElement} table\n   */\n  #formatTable(table) {\n    const wrapper = document.createElement('div');\n    wrapper.classList.add('rte-table-wrapper');\n    const parent = table.parentNode;\n    if (parent) {\n      parent.insertBefore(wrapper, table);\n      wrapper.appendChild(table);\n    }\n  }\n}\n\nif (!customElements.get('rte-formatter')) {\n  customElements.define('rte-formatter', RTEFormatter);\n}\n"],
+  "mappings": "AAAA,OAAS,cAAiB,mBAK1B,MAAM,qBAAqB,SAAU,CACnC,mBAAoB,CAClB,MAAM,kBAAkB,EACxB,KAAK,iBAAiB,OAAO,EAAE,QAAQ,KAAK,YAAY,CAC1D,CAMA,aAAa,MAAO,CAClB,MAAM,QAAU,SAAS,cAAc,KAAK,EAC5C,QAAQ,UAAU,IAAI,mBAAmB,EACzC,MAAM,OAAS,MAAM,WACjB,SACF,OAAO,aAAa,QAAS,KAAK,EAClC,QAAQ,YAAY,KAAK,EAE7B,CACF,CAEK,eAAe,IAAI,eAAe,GACrC,eAAe,OAAO,gBAAiB,YAAY",
+  "names": []
+}
